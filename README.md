@@ -1,9 +1,9 @@
 # kaput
 
 `kaput` is the Kubernetes Attack and Policy Underminer Tool— 
-think of it as a toolbox exploiting known weaknesses and vulnerabilities in the Kubernetes control and data plane. In a nutshell, `kaput` coordinates a collection of existing tools to attack Kubernetes clusters and creating a report for the cluster admin to act on.
+think of it as a toolbox exploiting known weaknesses and vulnerabilities in the Kubernetes control and data plane. In a nutshell, `kaput` mainly coordinates a collection of existing tools to probe Kubernetes clusters and respectively creates a report for the cluster admin to act on.
 
-I plan to use the following to gather candidate attack paths:
+I plan to use the following tools to gather candidate attack paths:
 
 - [aquasecurity/kube-hunter](https://github.com/aquasecurity/kube-hunter) 
 - [aquasecurity/kube-bench](https://github.com/aquasecurity/kube-bench)
@@ -13,7 +13,7 @@ I plan to use the following to gather candidate attack paths:
 - [nicholasjackson/cnitch](https://github.com/nicholasjackson/cnitch) 
 - [OpenSCAP](https://www.open-scap.org/resources/documentation/security-compliance-of-rhel7-docker-containers/)
 
-In addition to the above tools, `kaput` will at some point in time implements some simple attacks itself, such as:
+In addition to the above tools, `kaput` will (at some point in time) implement some simple attacks itself, including but not limited to:
 
 - some of the low-hanging fruits demonstrated in [Hacking & Hardening Kubernetes By Example](https://schd.ws/hosted_files/kccncna17/d8/Hacking%20and%20Hardening%20Kubernetes%20By%20Example%20v2.pdf)
 - pod-level: check if cluster is RBAC enabled, check if default SA is used and/or locked down
