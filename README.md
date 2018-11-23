@@ -20,3 +20,14 @@ In addition to the above tools, `kaput` will (at some point in time) implement s
 - service-level: check if it pod can see and communicate with other services in same/different namespaces (`NetworkPolicy` check)
 - node-level: poisoning of a node via pod running on the node
 - system-level: check if one can get to stuff into the `kube-system` namespace
+
+## Use
+
+Something like:
+
+```
+$ kaput --cluster=https://192.168.64.14:8443 --profile=generic,po,svc
+Summary: found 12 potential vulnerabilities of which 3 are exploitable
+Control plane:
+...
+```
